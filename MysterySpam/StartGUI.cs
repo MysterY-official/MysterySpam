@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace MysterySpam
 {
-    static class Program
+    static class StartGUI
     {
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
@@ -16,7 +16,7 @@ namespace MysterySpam
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new GUI());
         }
     }
 }

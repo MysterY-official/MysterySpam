@@ -1,6 +1,6 @@
 ﻿namespace MysterySpam
 {
-    partial class Form1
+    partial class GUI
     {
         /// <summary>
         /// Erforderliche Designervariable.
