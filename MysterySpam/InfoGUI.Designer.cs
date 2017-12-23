@@ -51,13 +51,14 @@
             // YTButton
             // 
             this.YTButton.AutoSize = true;
+            this.YTButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.YTButton.Depth = 0;
             this.YTButton.Icon = null;
             this.YTButton.Location = new System.Drawing.Point(12, 213);
             this.YTButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.YTButton.Name = "YTButton";
             this.YTButton.Primary = true;
-            this.YTButton.Size = new System.Drawing.Size(127, 36);
+            this.YTButton.Size = new System.Drawing.Size(125, 36);
             this.YTButton.TabIndex = 1;
             this.YTButton.Text = "MysterY on YT";
             this.YTButton.UseVisualStyleBackColor = true;
@@ -66,6 +67,7 @@
             // SkinButton
             // 
             this.SkinButton.AutoSize = true;
+            this.SkinButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SkinButton.Depth = 0;
             this.SkinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SkinButton.Icon = null;

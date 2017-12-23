@@ -8,9 +8,6 @@ namespace MysterySpam
 {
     static class StartGUI
     {
-        /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
-        /// </summary>
         [STAThread]
         static void Main()
         {
