@@ -12,15 +12,11 @@ using System.Windows.Forms;
 
 namespace MysterySpam
 {
-    public partial class GUI : MaterialForm
+    public partial class InfoGUI : MaterialForm
     {
-        public GUI()
+        public InfoGUI()
         {
             InitializeComponent();
-
-            String VersionString = "0.1";
-
-            this.Text = "MysterySpam - V" + VersionString;
 
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -33,15 +29,19 @@ namespace MysterySpam
             );
         }
 
-        private void GUI_Load(object sender, EventArgs e)
+        private void InfoGUI_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void InfoButton_Click(object sender, EventArgs e)
+        private void YTButton_Click(object sender, EventArgs e)
         {
-            Form InfoGUI = new InfoGUI();
-            InfoGUI.ShowDialog(this);
+            System.Diagnostics.Process.Start("https://www.youtube.com/channel/UCeH0nCIjzI8TFHdP65tSQ4w");
+        }
+
+        private void SkinButton_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/IgnaceMaes/MaterialSkin");
         }
     }
 }
