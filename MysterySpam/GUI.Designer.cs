@@ -38,6 +38,10 @@
             this.CopyPasteModeButton = new MaterialSkin.Controls.MaterialRadioButton();
             this.SimulateModeButton = new MaterialSkin.Controls.MaterialRadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.NeedsChatBox = new MaterialSkin.Controls.MaterialCheckBox();
+            this.KeyChooser = new System.Windows.Forms.ComboBox();
+            this.RandomBox = new MaterialSkin.Controls.MaterialCheckBox();
+            this.LetterCountBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             ((System.ComponentModel.ISupportInitialize)(this.SpeedTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,12 +178,86 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
+            // NeedsChatBox
+            // 
+            this.NeedsChatBox.AutoSize = true;
+            this.NeedsChatBox.Depth = 0;
+            this.NeedsChatBox.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NeedsChatBox.Location = new System.Drawing.Point(12, 227);
+            this.NeedsChatBox.Margin = new System.Windows.Forms.Padding(0);
+            this.NeedsChatBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.NeedsChatBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NeedsChatBox.Name = "NeedsChatBox";
+            this.NeedsChatBox.Ripple = true;
+            this.NeedsChatBox.Size = new System.Drawing.Size(203, 30);
+            this.NeedsChatBox.TabIndex = 9;
+            this.NeedsChatBox.Text = "Needs to open chat with key";
+            this.NeedsChatBox.UseVisualStyleBackColor = true;
+            this.NeedsChatBox.CheckedChanged += new System.EventHandler(this.NeedsChatBox_CheckedChanged);
+            // 
+            // KeyChooser
+            // 
+            this.KeyChooser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.KeyChooser.Enabled = false;
+            this.KeyChooser.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeyChooser.FormattingEnabled = true;
+            this.KeyChooser.ItemHeight = 15;
+            this.KeyChooser.Items.AddRange(new object[] {
+            "Y",
+            "T",
+            "Enter"});
+            this.KeyChooser.Location = new System.Drawing.Point(227, 231);
+            this.KeyChooser.Name = "KeyChooser";
+            this.KeyChooser.Size = new System.Drawing.Size(61, 23);
+            this.KeyChooser.TabIndex = 10;
+            this.KeyChooser.SelectedIndexChanged += new System.EventHandler(this.KeyChooser_SelectedIndexChanged);
+            // 
+            // RandomBox
+            // 
+            this.RandomBox.AutoSize = true;
+            this.RandomBox.Depth = 0;
+            this.RandomBox.Font = new System.Drawing.Font("Roboto", 10F);
+            this.RandomBox.Location = new System.Drawing.Point(12, 194);
+            this.RandomBox.Margin = new System.Windows.Forms.Padding(0);
+            this.RandomBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RandomBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RandomBox.Name = "RandomBox";
+            this.RandomBox.Ripple = true;
+            this.RandomBox.Size = new System.Drawing.Size(81, 30);
+            this.RandomBox.TabIndex = 11;
+            this.RandomBox.Text = "Random";
+            this.RandomBox.UseVisualStyleBackColor = true;
+            this.RandomBox.CheckedChanged += new System.EventHandler(this.RandomBox_CheckedChanged);
+            // 
+            // LetterCountBox
+            // 
+            this.LetterCountBox.Depth = 0;
+            this.LetterCountBox.Enabled = false;
+            this.LetterCountBox.Hint = "Number of random letters";
+            this.LetterCountBox.Location = new System.Drawing.Point(106, 198);
+            this.LetterCountBox.MaxLength = 2;
+            this.LetterCountBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LetterCountBox.Name = "LetterCountBox";
+            this.LetterCountBox.PasswordChar = '\0';
+            this.LetterCountBox.SelectedText = "";
+            this.LetterCountBox.SelectionLength = 0;
+            this.LetterCountBox.SelectionStart = 0;
+            this.LetterCountBox.Size = new System.Drawing.Size(182, 23);
+            this.LetterCountBox.TabIndex = 13;
+            this.LetterCountBox.TabStop = false;
+            this.LetterCountBox.UseSystemPasswordChar = false;
+            this.LetterCountBox.TextChanged += new System.EventHandler(this.LetterCountBox_Change);
+            // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.LetterCountBox);
+            this.Controls.Add(this.RandomBox);
+            this.Controls.Add(this.KeyChooser);
+            this.Controls.Add(this.NeedsChatBox);
             this.Controls.Add(this.SimulateModeButton);
             this.Controls.Add(this.CopyPasteModeButton);
             this.Controls.Add(this.ModeLabel);
@@ -215,6 +293,10 @@
         private MaterialSkin.Controls.MaterialRadioButton CopyPasteModeButton;
         private MaterialSkin.Controls.MaterialRadioButton SimulateModeButton;
         private System.Windows.Forms.GroupBox groupBox1;
+        private MaterialSkin.Controls.MaterialCheckBox NeedsChatBox;
+        private System.Windows.Forms.ComboBox KeyChooser;
+        private MaterialSkin.Controls.MaterialCheckBox RandomBox;
+        private MaterialSkin.Controls.MaterialSingleLineTextField LetterCountBox;
     }
 }
 
