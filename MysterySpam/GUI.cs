@@ -134,5 +134,10 @@ namespace MysterySpam
             }
             SpamText2 = SpamText.Text;
         }
+
+        private void GUI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

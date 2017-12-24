@@ -197,6 +197,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MysterySpam - V";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SpeedTrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
