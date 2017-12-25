@@ -14,13 +14,14 @@ namespace MysterySpam
 {
     public partial class GUI : MaterialForm
     {
-        String VersionString = "1.0";
+        String VersionString = "1.1";
         bool Running = false;
         static bool CopyPasteMode = true;
         static bool ChatKeyOn = false;
         static int ChatKey = 0;
         static bool RandomMode = false;
         static int RandomLetterCount = 1;
+        static bool DelayOn = false;
         System.Threading.Timer Timer = new System.Threading.Timer(Timer_callback, null, Timeout.Infinite, Timeout.Infinite);
         static InputSimulator Input = new InputSimulator();
         static String SpamText2 = "";
@@ -116,6 +117,11 @@ namespace MysterySpam
                 }
             }
 
+            if (DelayOn && ChatKeyOn)
+            {
+                Thread.Sleep(40);
+            }
+
             if (!RandomMode)
             {
                 if (CopyPasteMode)
@@ -144,7 +150,17 @@ namespace MysterySpam
                 }
             }
 
+            if (DelayOn)
+            {
+                Thread.Sleep(40);
+            }
+
             Input.Keyboard.KeyPress(VirtualKeyCode.RETURN);
+
+            if (DelayOn)
+            {
+                Thread.Sleep(40);
+            }
         }
 
         private void CopyPasteModeButton_CheckedChanged(object sender, EventArgs e)
@@ -222,7 +238,7 @@ namespace MysterySpam
 
         private void LetterCountBox_Change(object sender, EventArgs e)
         {
-            if (!LetterCountBox.Text.Equals(""))
+            if (!LetterCountBox.Text.Equals("") && IsDigitsOnly(LetterCountBox.Text))
             {
                 RandomLetterCount = Int16.Parse(LetterCountBox.Text);
             }
@@ -230,6 +246,22 @@ namespace MysterySpam
             {
                 RandomLetterCount = 1;
             }
+        }
+
+        private void DelayBox_CheckedChanged(object sender, EventArgs e)
+        {
+            DelayOn = DelayBox.Checked;
+        }
+
+        bool IsDigitsOnly(string str)
+        {
+            foreach (char c in str)
+            {
+                if (c < '0' || c > '9')
+                    return false;
+            }
+
+            return true;
         }
     }
 }

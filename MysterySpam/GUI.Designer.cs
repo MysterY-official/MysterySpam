@@ -42,6 +42,7 @@
             this.KeyChooser = new System.Windows.Forms.ComboBox();
             this.RandomBox = new MaterialSkin.Controls.MaterialCheckBox();
             this.LetterCountBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.DelayBox = new MaterialSkin.Controls.MaterialCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.SpeedTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -248,12 +249,31 @@
             this.LetterCountBox.UseSystemPasswordChar = false;
             this.LetterCountBox.TextChanged += new System.EventHandler(this.LetterCountBox_Change);
             // 
+            // DelayBox
+            // 
+            this.DelayBox.AutoSize = true;
+            this.DelayBox.Depth = 0;
+            this.DelayBox.Font = new System.Drawing.Font("Roboto", 10F);
+            this.DelayBox.Location = new System.Drawing.Point(305, 227);
+            this.DelayBox.Margin = new System.Windows.Forms.Padding(0);
+            this.DelayBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.DelayBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DelayBox.Name = "DelayBox";
+            this.DelayBox.Ripple = true;
+            this.DelayBox.Size = new System.Drawing.Size(263, 30);
+            this.DelayBox.TabIndex = 14;
+            this.DelayBox.Text = "Add delay (if chat doesn\'t open or\r\n                    message doesn\'t get send)" +
+    "";
+            this.DelayBox.UseVisualStyleBackColor = true;
+            this.DelayBox.CheckedChanged += new System.EventHandler(this.DelayBox_CheckedChanged);
+            // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.DelayBox);
             this.Controls.Add(this.LetterCountBox);
             this.Controls.Add(this.RandomBox);
             this.Controls.Add(this.KeyChooser);
@@ -297,6 +317,7 @@
         private System.Windows.Forms.ComboBox KeyChooser;
         private MaterialSkin.Controls.MaterialCheckBox RandomBox;
         private MaterialSkin.Controls.MaterialSingleLineTextField LetterCountBox;
+        private MaterialSkin.Controls.MaterialCheckBox DelayBox;
     }
 }
 
