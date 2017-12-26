@@ -21,7 +21,7 @@ namespace MysterySpam
         static int ChatKey = 0;
         static bool RandomMode = false;
         static int RandomLetterCount = 1;
-        static bool DelayOn = false;
+        static bool DelayOn = true;
         System.Threading.Timer Timer = new System.Threading.Timer(Timer_callback, null, Timeout.Infinite, Timeout.Infinite);
         static InputSimulator Input = new InputSimulator();
         static String SpamText2 = "";

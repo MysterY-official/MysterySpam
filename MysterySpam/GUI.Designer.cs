@@ -44,6 +44,7 @@
             this.LetterCountBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.DelayBox = new MaterialSkin.Controls.MaterialCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.SpeedTrackBar)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // InfoButton
@@ -173,9 +174,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.DelayBox);
             this.groupBox1.Location = new System.Drawing.Point(4, 263);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 94);
+            this.groupBox1.Size = new System.Drawing.Size(491, 94);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
@@ -252,9 +254,11 @@
             // DelayBox
             // 
             this.DelayBox.AutoSize = true;
+            this.DelayBox.Checked = true;
+            this.DelayBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DelayBox.Depth = 0;
             this.DelayBox.Font = new System.Drawing.Font("Roboto", 10F);
-            this.DelayBox.Location = new System.Drawing.Point(305, 227);
+            this.DelayBox.Location = new System.Drawing.Point(221, 27);
             this.DelayBox.Margin = new System.Windows.Forms.Padding(0);
             this.DelayBox.MouseLocation = new System.Drawing.Point(-1, -1);
             this.DelayBox.MouseState = MaterialSkin.MouseState.HOVER;
@@ -273,7 +277,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.DelayBox);
             this.Controls.Add(this.LetterCountBox);
             this.Controls.Add(this.RandomBox);
             this.Controls.Add(this.KeyChooser);
@@ -297,6 +300,8 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SpeedTrackBar)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
