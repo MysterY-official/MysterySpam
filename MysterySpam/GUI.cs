@@ -14,7 +14,7 @@ namespace MysterySpam
 {
     public partial class GUI : MaterialForm
     {
-        String VersionString = "1.1";
+        String VersionString = "1.2";
         bool Running = false;
         static bool CopyPasteMode = true;
         static bool ChatKeyOn = false;
