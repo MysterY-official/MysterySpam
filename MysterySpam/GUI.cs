@@ -14,7 +14,7 @@ namespace MysterySpam
 {
     public partial class GUI : MaterialForm
     {
-        String VersionString = "1.2";
+        String VersionString = "1.3";
         bool Running = false;
         static bool CopyPasteMode = true;
         static bool ChatKeyOn = false;
@@ -119,7 +119,7 @@ namespace MysterySpam
 
             if (DelayOn && ChatKeyOn)
             {
-                Thread.Sleep(40);
+                Thread.Sleep(10);
             }
 
             if (!RandomMode)
@@ -152,14 +152,14 @@ namespace MysterySpam
 
             if (DelayOn)
             {
-                Thread.Sleep(40);
+                Thread.Sleep(10);
             }
 
             Input.Keyboard.KeyPress(VirtualKeyCode.RETURN);
 
             if (DelayOn)
             {
-                Thread.Sleep(40);
+                Thread.Sleep(10);
             }
         }
 
@@ -168,7 +168,7 @@ namespace MysterySpam
             if (CopyPasteModeButton.Checked)
             {
                 CopyPasteMode = true;
-                SpeedTrackBar.Minimum = 100;
+                SpeedTrackBar.Minimum = 50;
             }
         }
 

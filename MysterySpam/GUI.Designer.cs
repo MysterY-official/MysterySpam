@@ -99,7 +99,7 @@
             this.SpeedTrackBar.LargeChange = 50;
             this.SpeedTrackBar.Location = new System.Drawing.Point(12, 110);
             this.SpeedTrackBar.Maximum = 1000;
-            this.SpeedTrackBar.Minimum = 100;
+            this.SpeedTrackBar.Minimum = 50;
             this.SpeedTrackBar.Name = "SpeedTrackBar";
             this.SpeedTrackBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SpeedTrackBar.Size = new System.Drawing.Size(576, 45);
